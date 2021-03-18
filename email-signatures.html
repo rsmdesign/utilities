@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="noindex,nofollow">
+	<title>RSM Design · Email Signature Generator</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="assets/css/email-signatures.css" rel="stylesheet" type="text/css">
+
+	<link href="rsm-design_logo_mark_favicon.png" rel="shortcut icon" type="image/x-icon"/>
+	<link href="rsm-design_logo_mark_touch-icon.png" rel="apple-touch-icon"/>
+</head>
+<body>
+	<section id="app">
+		<h1>RSM Design email signatures</h1>
+		<ol>
+			<li>Enter your information in the form below.</li>
+			<li>
+				Highlight the signature at the bottom of the page and copy.<br>
+				<ul style="list-style: disc">
+					<li>Mac users: Press <b>Command + C</b></li>
+					<li>PC users: Press <b>CTRL + C</b></li>
+				</ul>
+				<img style="margin:0.5em 0 0 -2em;max-width:200px" src="assets/img/rsm_email-signature-highlight.png" alt="A highlighted signature">
+			</li>
+			<li>Follow the instructions for your email client, listed on <a target="_blank" href="https://codepen.io/jlwarner/live/802990ba7640779519725905718775bb">this page.</a></li>
+		</ol>
+		<hr/>
+		<form>
+			<h2>User information</h2>
+			<label>
+				Name
+				<input v-model="user.name" name="user.name" type="text" placeholder="Full Name">
+			</label>
+			<label>
+				Job Title
+				<input v-model="user.title" name="user.title" type="text" placeholder="Job Title">
+			</label>
+			<label>
+				Studio
+				<select v-model="user.office">
+					<option disabled value="">Please select one</option>
+					<option>San Clemente</option>
+					<option>Dallas</option>
+					<option>Los Angeles</option>
+					<option>Boulder</option>
+				  </select>
+			</label>
+			<label>
+				Direct Phone
+				<input v-model="user.dphone" name="user.dphone" type="tel" placeholder="XXX.XXX.XXXX">
+			</label>
+			<label>
+				Direct Phone Extension
+				<input v-model="user.dphoneext" name="user.dphoneext" type="tel" placeholder="XXX">
+			</label>
+			<label>
+				Mobile Phone
+				<input v-model="user.mphone" name="user.mphone" type="tel" placeholder="XXX.XXX.XXXX">
+			</label>
+		</form>
+		<hr style="margin-bottom:3em;"/>
+		
+		<div dir="ltr" style="color:#54565A;font-weight:normal;font:400 10px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
+			
+			<!-- NAME -->
+
+			<p style="margin:0;color:#54565A;font-weight:bold;font-weight:500;font:600 14.5px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">{{ user.name }}</p>
+			<p style="margin:0 0 20px;font:400 10px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">{{ user.title }}</p>
+			
+			<a href="https://rsmdesign.com/" target="_blank"><img style="width:105px;max-width:100%;height:auto;" src="https://docs.google.com/uc?export=download&amp;id=13f1DpIhzCC0uM1aD4g8YOCPzfdv8ecY2&amp;revid=0B3Ii1VHj0jBlczRmYjRoY2dPdU1HMGNUT2U0bmszVjlIYkpFPQ"></a>
+
+			<p style="margin:4px 0 12px">San Clemente&nbsp;. Dallas&nbsp;. Los Angeles&nbsp;. Boulder</p>
+
+			<!-- OFFICES -->
+
+			<p v-if="user.office=='San Clemente'" style="margin:12px 0">
+				<a href="https://www.google.com/maps/place/RSM+Design/@33.42698,-117.6152042,15z/data=!4m5!3m4!1s0x0:0x7d1bca50aa90dfd7!8m2!3d33.42698!4d-117.6152042" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">160 Avenida Cabrillo<br/>San Clemente, CA 92672<br/>USA</a>
+			</p>
+
+			<p v-if="user.office=='Dallas'" style="margin:12px 0">
+				<a href="https://www.google.com/maps/place/RSM+Design/@32.7828361,-96.7672708,15z/data=!4m5!3m4!1s0x0:0x374c1952818d4a7e!8m2!3d32.7828361!4d-96.7672708" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">4100 Commerce Street #7<br/>Dallas, TX 75226<br/>USA</a>
+			</p>
+			
+			<!-- PHONE NUMBERS -->
+
+			<p style="margin:12px 0 0;">
+				<a v-if="user.office=='San Clemente'" v-bind:href="'tel:+1' + user.scphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.scphone.replace(/\-/g, '.') }}</a>
+				<a v-if="user.office=='Dallas'" v-bind:href="'tel:+1' + user.dallasphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dallasphone.replace(/\-/g, '.') }}</a>
+				<a v-if="user.office=='Los Angeles'" v-bind:href="'tel:+1' + user.laphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.laphone.replace(/\-/g, '.') }}</a>
+				<a v-if="user.office=='Boulder'" v-bind:href="'tel:+1' + user.boulderphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.boulderphone.replace(/\-/g, '.') }}</a>
+				 Main
+			</p>
+
+			<p v-if="user.dphone" style="margin:0;"><a v-bind:href="'tel:+1' + user.dphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dphone.replace(/\-/g, '.') }}</a> x{{ user.dphoneext }} Direct</p>
+
+			<p v-if="user.mphone" style="margin:0"><a v-bind:href="'tel:+1' + user.mphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.mphone.replace(/\-/g, '.') }}</a> Mobile</p>
+			
+			<!-- URL -->
+
+			<p style="margin:12px 0 0"><a href="https://rsmdesign.com/" target="_blank" style="color:#54565A;font-weight:bold;font-weight:500;font:400 10px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;text-decoration-skip:ink;text-decoration-skip-ink:auto;">rsmdesign.com</a></p>
+		</div>
+	</section>
+</body>
+
+<script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+<script>
+	const app = new Vue({
+		el: '#app',
+		data: {
+			user: {
+				name: 'First Last',
+				title: 'Job Title',
+				office: 'San Clemente',
+				scphone: '949.492.9479',
+				dallasphone: '972.974.3690',
+				laphone: '213.705.9006',
+				boulderphone: '303.223.9875',
+				dphone: '',
+				dphoneext: '',
+				mphone: ''
+			}
+		}
+	})
+</script>
+</html>

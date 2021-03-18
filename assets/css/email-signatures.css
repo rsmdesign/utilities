@@ -1,0 +1,55 @@
+body {
+  background: #f0f0f0;
+  font: 400 1em/1.5 'Proxima Nova', -apple-system, BlinkMacSystemFont, DIN, Roboto, 'Helvetica Neue', Helvetica, 'Lucida Grande', Geneva, Arial, Noto, sans-serif;
+}
+
+section {
+  background: white;
+  width: 32em;
+  max-width: 80%;
+  margin: 1em auto;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  margin: 2em 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+input {
+  width: 96%;
+  padding: 1em;
+  border: 0;
+  outline: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
+}
+input:focus {
+  box-shadow: 0 0px 2px #4D90FE !important;
+}
+
+select {
+  display: block;
+}
