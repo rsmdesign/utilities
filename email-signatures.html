@@ -62,20 +62,20 @@
 		</form>
 		<hr style="margin-bottom:3em;"/>
 		
-		<div dir="ltr" style="color:#54565A;font-weight:normal;font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;">
+		<div dir="ltr" style="color:#54565A;font-weight:normal;font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
 			
 			<!-- NAME -->
 
-			<p style="margin:0;color:#54565A;font-weight:bold;font-weight:700;font:700 16px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;">{{ user.name }}</p>
-			<p style="margin:0 0 20px;font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;">{{ user.title }}</p>
+			<p style="margin:0;color:#54565A;font-weight:bold;font-weight:700;font:700 16px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">{{ user.name }}</p>
+			<p style="margin:0 0 20px;font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">{{ user.title }}</p>
 			
 			<a href="https://rsmdesign.com/" target="_blank"><img style="width:105px;max-width:100%;height:auto;" src="https://docs.google.com/uc?export=download&amp;id=13f1DpIhzCC0uM1aD4g8YOCPzfdv8ecY2&amp;revid=0B3Ii1VHj0jBlczRmYjRoY2dPdU1HMGNUT2U0bmszVjlIYkpFPQ" alt="RSM Design logo"></a>
 
-			<p style="margin:4px 0 12px; font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;">San Clemente&nbsp;. Dallas&nbsp;. Los Angeles&nbsp;. Boulder</p>
+			<p style="margin:4px 0 12px; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">San Clemente&nbsp;. Dallas&nbsp;. Los Angeles&nbsp;. Boulder</p>
 			
 			<!-- PHONE NUMBERS -->
 
-			<p style="margin:12px 0 0; font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;">
+			<p style="margin:12px 0 0; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
 				<a v-if="user.office=='San Clemente'" v-bind:href="'tel:+1' + user.scphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.scphone.replace(/\-/g, '.') }}</a>
 				<a v-if="user.office=='Dallas'" v-bind:href="'tel:+1' + user.dallasphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dallasphone.replace(/\-/g, '.') }}</a>
 				<a v-if="user.office=='Los Angeles'" v-bind:href="'tel:+1' + user.laphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.laphone.replace(/\-/g, '.') }}</a>
@@ -83,13 +83,13 @@
 				 Main
 			</p>
 
-			<p v-if="user.dphone" style="margin:0; font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;"><a v-bind:href="'tel:+1' + user.dphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dphone.replace(/\-/g, '.') }}</a> x{{ user.dphoneext }} Direct</p>
+			<p v-if="user.dphone" style="margin:0; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;"><a v-bind:href="'tel:+1' + user.dphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dphone.replace(/\-/g, '.') }}</a> x{{ user.dphoneext }} Direct</p>
 
-			<p v-if="user.mphone" style="margin:0; font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;"><a v-bind:href="'tel:+1' + user.mphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.mphone.replace(/\-/g, '.') }}</a> Mobile</p>
+			<p v-if="user.mphone" style="margin:0; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;"><a v-bind:href="'tel:+1' + user.mphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.mphone.replace(/\-/g, '.') }}</a> Mobile</p>
 			
 			<!-- URL -->
 
-			<p style="margin:12px 0 0; font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;"><a href="https://rsmdesign.com/" target="_blank" style="color:#54565A;font-weight:bold;font-weight:500;font:400 12px/1.2 'Proxima Nova',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Verdana,Noto,Arial,sans-serif;text-decoration-skip:ink;text-decoration-skip-ink:auto;">rsmdesign.com</a></p>
+			<p style="margin:12px 0 0; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;"><a href="https://rsmdesign.com/" target="_blank" style="color:#54565A;font-weight:bold;font-weight:500;font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;text-decoration-skip:ink;text-decoration-skip-ink:auto;">rsmdesign.com</a></p>
 		</div>
 	</section>
 </body>
