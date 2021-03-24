@@ -48,12 +48,8 @@
 				  </select>
 			</label>
 			<label>
-				Direct Phone
-				<input v-model="user.dphone" name="user.dphone" type="tel" placeholder="XXX.XXX.XXXX">
-			</label>
-			<label>
-				Direct Phone Extension
-				<input v-model="user.dphoneext" name="user.dphoneext" type="tel" placeholder="XXX">
+				Direct Extension
+				<input v-model="user.dphone" name="user.dphoneext" type="tel" placeholder="XXX">
 			</label>
 			<label>
 				Mobile Phone
@@ -80,10 +76,9 @@
 				<a v-if="user.office=='Dallas'" v-bind:href="'tel:+1' + user.dallasphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dallasphone.replace(/\-/g, '.') }}</a>
 				<a v-if="user.office=='Los Angeles'" v-bind:href="'tel:+1' + user.laphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.laphone.replace(/\-/g, '.') }}</a>
 				<a v-if="user.office=='Boulder'" v-bind:href="'tel:+1' + user.boulderphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.boulderphone.replace(/\-/g, '.') }}</a>
-				 Main
+				<span v-if="user.dphone"> x{{ user.dphone }}</span>
+				 Office
 			</p>
-
-			<p v-if="user.dphone" style="margin:0; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;"><a v-bind:href="'tel:+1' + user.dphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dphone.replace(/\-/g, '.') }}</a> x{{ user.dphoneext }} Direct</p>
 
 			<p v-if="user.mphone" style="margin:0; font:400 12px/1.2 'Proxima Nova',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;"><a v-bind:href="'tel:+1' + user.mphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.mphone.replace(/\-/g, '.') }}</a> Mobile</p>
 			
@@ -108,7 +103,6 @@
 				laphone: '213.705.9006',
 				boulderphone: '303.223.9875',
 				dphone: '',
-				dphoneext: '',
 				mphone: ''
 			}
 		}
