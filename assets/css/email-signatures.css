@@ -1,9 +1,9 @@
 body {
   background: #f0f0f0;
-  font: 400 1em/1.5 'Proxima Nova',Avenir,'Avenir Next', Verdana, -apple-system, BlinkMacSystemFont, Tahoma, 'Helvetica Neue', Helvetica, Roboto, Noto, Arial, sans-serif;
+  font: 400 1em/1.5 'Proxima Nova',Avenir,'Avenir Next',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;
 }
 
-section {
+section, main {
   background: white;
   width: 32em;
   max-width: 80%;

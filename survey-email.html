@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="noindex,nofollow">
+	<title>RSM Design · Client Survey Email</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="assets/css/email-signatures.css" rel="stylesheet" type="text/css">
+
+	<link href="rsm-design_logo_mark_favicon.png" rel="shortcut icon" type="image/x-icon"/>
+	<link href="rsm-design_logo_mark_touch-icon.png" rel="apple-touch-icon"/>
+</head>
+<body>
+	<main id="app">
+		<form>
+			<label>
+				Name
+				<input v-model="user.name" name="user.name" type="text" placeholder="Your Name">
+			</label>
+		</form>
+		<hr style="margin-bottom:3em;"/>
+		<div dir="ltr">
+			<p style="font: 0.875em/1.333 'Proxima Nova',Avenir,'Avenir Next',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
+				Hi “Name”,
+			</p>
+			<p style="font: 0.875em/1.333 'Proxima Nova',Avenir,'Avenir Next',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
+				Thank you for your time and initial feedback during our presentation. We want to make sure we are meeting and exceeding your needs. Your feedback is essential to us growing and improving here at RSM. If you don’t mind taking 3 minutes to share your thoughts we would greatly appreciate it.
+			</p>
+			<p style="font: 0.875em/1.333 'Proxima Nova',Avenir,'Avenir Next',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
+				Please use this link to access our presentation: <br/>
+				<a href="#">“Project Name” Presentation Link</a>
+			</p>
+			<p style="font: bold 1.3125em/1.333 'Proxima Nova',Avenir,'Avenir Next',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;color:#666666;margin-bottom:0;">Are you happy with our progress?</p>
+			<div>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSchHnYUTqgo-_JcXtNoofZOyz9tq4sfD4VWAVC0yhyy7JnuzQ/viewform?usp=pp_url&amp;entry.1747016377=Needs+Improvement" target="_blank">
+					<img style="width:100px;max-width:33%;" src="assets/img/rsm_email_needs-improvement.jpg" alt="Needs improvement">
+				</a>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSchHnYUTqgo-_JcXtNoofZOyz9tq4sfD4VWAVC0yhyy7JnuzQ/viewform?usp=pp_url&amp;entry.1747016377=Met+Expectations" target="_blank">
+					<img style="width:100px;max-width:33%;" src="assets/img/rsm_email_met-expectations.jpg" alt="Met expectations">
+				</a>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSchHnYUTqgo-_JcXtNoofZOyz9tq4sfD4VWAVC0yhyy7JnuzQ/viewform?usp=pp_url&amp;entry.1747016377=Exceeded+Expectations" target="_blank">
+					<img style="width:100px;max-width:33%;" src="assets/img/rsm_email_exceeded-expectations.jpg" alt="Exceeded expectations">
+				</a>
+			</div>
+			<p style="font: 0.875em/1.333 'Proxima Nova',Avenir,'Avenir Next',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">
+				Thank you,<br/>
+				{{ user.name }}
+			</p>
+		</div>
+	</main>
+	<script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+	<script>
+		const app = new Vue({
+			el: '#app',
+			data: {
+				user: {
+					name: '“Name”'
+				}
+			}
+		})
+	</script>
+</body>
+</html>
