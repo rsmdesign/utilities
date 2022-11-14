@@ -1,0 +1,8 @@
+// Step 1: export CSV from Webflow
+// Step 2: use this regex to get all image URLs from projects csv (I do this in Sublime Text)
+
+https:\/\/uploads-ssl\.webflow\.com\/.*?(\.jpg|\.png|\.gif)
+
+// Step 3: copy URLs
+// Step 4: in Chrome, change download location to new folder
+// Step 5: paste URLs list into TabSave extension
