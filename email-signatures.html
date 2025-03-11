@@ -24,7 +24,7 @@
 				</ul>
 				<img style="margin:0.5em 0 0 -2em;max-width:200px" src="assets/img/rsm_email-signature-highlight.png" alt="A highlighted signature">
 			</li>
-			<li>Follow the instructions for your email client, listed on <a target="_blank" href="https://codepen.io/jlwarner/live/802990ba7640779519725905718775bb">this page.</a></li>
+			<li>In the settings of your email client, create a new signature and paste. Set this as your default email signature</a></li>
 		</ol>
 		<hr/>
 		<form>
@@ -44,6 +44,7 @@
 					<option>San Clemente</option>
 					<option>Dallas</option>
 					<option>Los Angeles</option>
+					<option>New York</option>
 				  </select>
 			</label>
 			<label for="dphone">
@@ -68,7 +69,7 @@
 				<img style="width:105px;max-width:100%;height:auto;" src="assets/img/rsm_logo_email-signature.png" alt="RSM Design logo">
 			</a>
 
-			<p style="margin:4px 0 12px; font:400 12px/1.2 'Proxima Nova',Avenir,'Avenir Next',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">San Clemente&nbsp;. Dallas&nbsp;. Los Angeles</p>
+			<p style="margin:4px 0 12px; font:400 12px/1.2 'Proxima Nova',Avenir,'Avenir Next',Verdana,-apple-system,BlinkMacSystemFont,Tahoma,'Helvetica Neue',Helvetica,Roboto,Noto,Arial,sans-serif;">San Clemente&nbsp;· Dallas&nbsp;· Los Angeles&nbsp;· New York</p>
 			
 			<!-- PHONE NUMBERS -->
 
@@ -76,6 +77,7 @@
 				<a v-if="user.office=='San Clemente'" v-bind:href="'tel:+1' + user.scphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.scphone.replace(/\-/g, '.') }}</a>
 				<a v-if="user.office=='Dallas'" v-bind:href="'tel:+1' + user.dallasphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.dallasphone.replace(/\-/g, '.') }}</a>
 				<a v-if="user.office=='Los Angeles'" v-bind:href="'tel:+1' + user.laphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.laphone.replace(/\-/g, '.') }}</a>
+				<a v-if="user.office=='New York'" v-bind:href="'tel:+1' + user.nyphone.replace(/\./g, '')" target="_blank" style="color:#54565A;text-decoration-skip:ink;text-decoration-skip-ink:auto;">+1&nbsp;{{ user.nyphone.replace(/\-/g, '.') }}</a>
 				<span v-if="user.dphone"> x{{ user.dphone }}</span>
 				 Office
 			</p>
@@ -99,6 +101,7 @@
 					scphone: '949.492.9479',
 					dallasphone: '972.974.3690',
 					laphone: '213.705.9006',
+					nyphone: '212.938.2793',
 					dphone: '',
 					mphone: '',
 				}
